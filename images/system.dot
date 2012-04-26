@@ -1,0 +1,50 @@
+digraph {
+  graph [packmode = clust]
+
+  SystemWide   [label = "SystemWide"] [shape = box]
+  Mail         [label = "Application \"Mail\""]
+  Safari       [label = "Application \"Safari\""]
+  Terminal     [label = "Application \"Terminal\""] [shape = doubleoctagon]
+  
+  MMenuBar    [label = "MenuBar"]
+  SMenuBar    [label = "MenuBar"]
+  TMenuBar    [label = "MenuBar"]
+
+  MWindow  [label = "Window \"Inbox\""]
+  TWindow  [label = "Window \"mrada - ssh\""]
+  TWindow2 [label = "Window \"mrada - macirb\""]
+  SWindow  [label = "Window \"Github...\""]
+
+  Toolbar [label = "Toolbar"]
+  
+  E1 [shape = none] [label = ""]
+  E2 [shape = none] [label = ""]
+  E3 [shape = none] [label = ""]
+  E4 [shape = none] [label = ""]
+  E5 [shape = none] [label = ""]
+  E6 [shape = none] [label = ""]
+  E7 [shape = none] [label = ""]
+  E8 [shape = none] [label = ""]
+  E9 [shape = none] [label = ""]
+  E0 [shape = none] [label = ""]
+
+  Mail -> MMenuBar
+  Safari -> SMenuBar
+  Terminal -> TMenuBar
+
+  MMenuBar -> E1 [style = dashed] [arrowhead = none]
+  SMenuBar -> E2 [style = dashed] [arrowhead = none]
+  TMenuBar -> E3 [style = dashed] [arrowhead = none]
+
+  Mail -> MWindow
+  Safari -> SWindow
+  Terminal -> TWindow
+  Terminal -> TWindow2
+
+  MWindow -> E4 [style = dashed] [arrowhead = none]
+  SWindow -> Toolbar
+  TWindow -> E5 [style = dashed] [arrowhead = none]
+  TWindow2 -> E6 [style = dashed] [arrowhead = none]
+
+  SystemWide -> Terminal [style = dotted]
+}
