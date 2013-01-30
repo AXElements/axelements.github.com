@@ -604,12 +604,8 @@ strong {
 .youtube {
   margin-left: auto;
   margin-right: auto;
-  width: 640px;
-}
-
-.youtube-player {
-  width: 640px;
-  height: 390px;
+  width: 1024px;
+  margin-bottom: 24px;
 }
 
 .wrapper {
